@@ -1,0 +1,9 @@
+FLV:        | FLV Header | FLV BODY |
+
+FLV Header: | Name(3 bytes) | Version(1 byte) | Reserve(1 byte) | Size(4 bytes) |    total: 9 bytes
+
+FLV BODY:   | Previous Tag Size #0(4 bytes) | Tag #1 | Previous Tag Size #1(4 bytes) | Tag #2 | ......
+
+Tag #1:     | Tag Header | Tag Data |
+
+Tag Header: | Type(1 byte) | Datasize(3 bytes) | Timestamp(3 bytes) | Timestamp_ex(1 byte) | Stream Id(3 bytes) |   total: 11 bytes
